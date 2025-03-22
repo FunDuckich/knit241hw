@@ -1,20 +1,18 @@
 package org.knit.solutions;
 
+import org.knit.TaskDescription;
 import org.knit.solutions.lab2sem2.Consumer;
 import org.knit.solutions.lab2sem2.DistributionPoint;
 import org.knit.solutions.lab2sem2.Producer;
 
-public class Task7 {
-    public static void execute() throws InterruptedException {
+@TaskDescription(taskNumber = 7, taskDescription = "Производитель-Потребитель с ограничением", href = "org/knit/solutions/taskExampleClasses/README.md")
+public class Task7 implements Solution {
+    public void execute() {
         DistributionPoint distributionPoint = new DistributionPoint();
         Producer producer = new Producer(distributionPoint);
         Consumer consumer = new Consumer(distributionPoint);
 
         producer.start();
         consumer.start();
-    }
-
-    public static void main(String[] args) throws InterruptedException {
-        execute();
     }
 }
