@@ -6,7 +6,7 @@ public class TrafficLight {
     public synchronized void changeColor() throws InterruptedException {
         if (currentColor == TrafficLightColor.RED) {
             currentColor = TrafficLightColor.GREEN;
-            System.out.println("Светофор: 🚦🟢 ЗЕЛЕНЫЙ свет - машины могут ехать!");
+            System.out.println("ЗЕЛЕНЫЙ свет!");
             notifyAll();
         } else {
             currentColor = TrafficLightColor.RED;
@@ -18,7 +18,7 @@ public class TrafficLight {
         while (currentColor == TrafficLightColor.RED) {
             wait();
         }
-        System.out.println("ЗЕЛЕНЫЙ свет.");
+        System.out.println("Машина проехала");
         Thread.sleep(500);
     }
 

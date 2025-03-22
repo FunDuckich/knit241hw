@@ -1,11 +1,14 @@
 package org.knit.solutions;
 
+import org.knit.TaskDescription;
 import org.knit.solutions.lab2sem2.CarInTrafficLightTask;
 import org.knit.solutions.lab2sem2.TrafficLight;
 import org.knit.solutions.lab2sem2.TrafficLightController;
 
-public class Task8 {
-    public static void execute() throws InterruptedException {
+@TaskDescription(taskNumber = 8, taskDescription = "Перекресток: светофор и машины", href = "org/knit/solutions/taskExampleClasses/README.md")
+public class Task8 implements Solution {
+    @Override
+    public void execute() {
         TrafficLight trafficLight = new TrafficLight();
         TrafficLightController trafficLightController = new TrafficLightController(trafficLight);
         CarInTrafficLightTask car1 = new CarInTrafficLightTask(trafficLight);
