@@ -7,8 +7,9 @@ import org.knit.solutions.lab2sem2.Railroad;
 import org.knit.solutions.lab2sem2.Train;
 
 @TaskDescription(taskNumber = 6, taskDescription = "Железнодорожный переезд", href = "org/knit/solutions/taskExampleClasses/README.md")
-public class Task6 {
-    public static void execute() throws InterruptedException {
+public class Task6 implements Solution {
+    @Override
+    public void execute() {
         Railroad railroad = new Railroad();
         Train train = new Train(railroad);
         CarInTrainTask car = new CarInTrainTask(railroad);
