@@ -7,6 +7,7 @@ import org.knit.solutions.lab2sem2.TrafficLightController;
 
 @TaskDescription(taskNumber = 8, taskDescription = "Перекресток: светофор и машины", href = "org/knit/solutions/taskExampleClasses/README.md")
 public class Task8 implements Solution {
+    @Override
     public void execute() {
         TrafficLight trafficLight = new TrafficLight();
         TrafficLightController trafficLightController = new TrafficLightController(trafficLight);
