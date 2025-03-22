@@ -4,7 +4,7 @@ import org.knit.TaskDescription;
 import org.knit.solutions.lab2sem2.Car;
 import org.knit.solutions.lab2sem2.GasStation;
 
-@TaskDescription(taskNumber = 4, taskDescription = "Краткое описание задачи 1", href = "org/knit/solutions/taskExampleClasses/README.md")
+@TaskDescription(taskNumber = 4, taskDescription = "Автозаправочная станция", href = "org/knit/solutions/taskExampleClasses/README.md")
 public class Task4 implements Solution {
     public void execute() {
         GasStation gasStation = new GasStation();
