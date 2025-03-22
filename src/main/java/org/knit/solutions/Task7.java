@@ -7,6 +7,7 @@ import org.knit.solutions.lab2sem2.Producer;
 
 @TaskDescription(taskNumber = 7, taskDescription = "Производитель-Потребитель с ограничением", href = "org/knit/solutions/taskExampleClasses/README.md")
 public class Task7 implements Solution {
+    @Override
     public void execute() {
         DistributionPoint distributionPoint = new DistributionPoint();
         Producer producer = new Producer(distributionPoint);
