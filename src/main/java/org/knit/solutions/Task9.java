@@ -1,5 +1,6 @@
 package org.knit.solutions;
 
+import org.knit.TaskDescription;
 import org.knit.solutions.lab2sem2.Assembler;
 import org.knit.solutions.lab2sem2.Part;
 import org.knit.solutions.lab2sem2.QualityControlOperator;
@@ -8,6 +9,7 @@ import org.knit.solutions.lab2sem2.Stamper;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
+@TaskDescription(taskNumber = 9, taskDescription = "Конвейер сборки деталей", href = "org/knit/solutions/taskExampleClasses/README.md")
 public class Task9 implements Solution {
     @Override
     public void execute() {
