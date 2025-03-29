@@ -8,8 +8,9 @@ import org.knit.solutions.lab2sem2.Stamper;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 
-public class Task9 {
-    public static void execute() throws InterruptedException {
+public class Task9 implements Solution {
+    @Override
+    public void execute() {
         BlockingQueue<Part> blanksForAssemblyQueue = new LinkedBlockingQueue<>(5);
         BlockingQueue<Part> assembledPartsForInspectionQueue = new LinkedBlockingQueue<>(5);
 
@@ -21,10 +22,22 @@ public class Task9 {
         assembler.start();
         qualityControlOperator.start();
 
-        stamper.join();
+        try {
+            stamper.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
-        assembler.join();
-        qualityControlOperator.join();
+        try {
+            assembler.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            qualityControlOperator.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         System.out.println("Конвейер сборки завершил работу.");
     }
