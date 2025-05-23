@@ -6,7 +6,7 @@ import java.util.List;
 public class Stock {
     private final String name;
     private double price;
-    private List<StockObserver> observers;
+    private final List<StockObserver> observers;
 
     public Stock(String name, double initialPrice) {
         this.name = name;
@@ -16,10 +16,6 @@ public class Stock {
 
     public String getName() {
         return name;
-    }
-
-    public double getPrice() {
-        return price;
     }
 
     public void setPrice(double newPrice) {
